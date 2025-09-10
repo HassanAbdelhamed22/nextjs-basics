@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import Image from "next/image";
 
 async function getProduct(id: string) {
@@ -84,9 +85,10 @@ const ProductPage = async ({ params }: IProps) => {
 
             {/* CTA */}
             <div className="mt-8">
-              <button className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold py-3 rounded-xl transition">
-                🛒 Buy Now
-              </button>
+              <Button
+                text="🛒 Add to Cart"
+                onClick={() => console.log("Clicked")}
+              />
             </div>
           </div>
         </div>
