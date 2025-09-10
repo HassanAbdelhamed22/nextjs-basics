@@ -1,4 +1,8 @@
-const ProductPage = async ({ params }: { params: Promise<{ id: string }> }) => {
+interface IProps {
+  params: Promise<{ id: string }>;
+}
+
+const ProductPage = async ({ params }: IProps) => {
   const { id } = await params;
   console.log(id);
   return (
