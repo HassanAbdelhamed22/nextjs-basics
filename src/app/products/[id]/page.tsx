@@ -85,10 +85,7 @@ const ProductPage = async ({ params }: IProps) => {
 
             {/* CTA */}
             <div className="mt-8">
-              <Button
-                text="🛒 Add to Cart"
-                onClick={() => console.log("Clicked")}
-              />
+              <Button text="🛒 Add to Cart" />
             </div>
           </div>
         </div>
