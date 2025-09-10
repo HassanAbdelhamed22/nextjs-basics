@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 async function getProduct(id: string) {
   const res = await fetch(`https://dummyjson.com/products/${id}`);
 
@@ -23,10 +25,12 @@ const ProductPage = async ({ params }: IProps) => {
         <div className="grid md:grid-cols-2">
           {/* Images */}
           <div className="bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-6">
-            <img
+            <Image
               src={product.thumbnail || "https://via.placeholder.com/400"}
               alt={product.title}
               className="object-contain max-h-96 rounded-lg shadow-md"
+              width={400}
+              height={400}
             />
           </div>
 

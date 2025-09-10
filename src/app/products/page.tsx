@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 async function getProducts() {
@@ -26,10 +27,12 @@ const ProductsPage = async () => {
             className="bg-white dark:bg-gray-800 shadow-md rounded-2xl overflow-hidden hover:shadow-xl dark:hover:shadow-gray-700 transition duration-300"
           >
             <div className="h-48 w-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
-              <img
+              <Image
                 src={product.thumbnail || "https://via.placeholder.com/200"}
                 alt={product.title}
                 className="object-contain h-full w-full"
+                width={400}
+                height={400}
               />
             </div>
 
