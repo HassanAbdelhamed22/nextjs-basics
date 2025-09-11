@@ -15,6 +15,16 @@ interface IProps {
   params: Promise<{ id: string }>;
 }
 
+export async function generateMetadata({ params }: IProps) {
+  const { id } = await params;
+  const product = await getProduct(id);
+
+  return {
+    title: product.title,
+    description: product.description,
+  };
+}
+
 const ProductPage = async ({ params }: IProps) => {
   const { id } = await params;
   const product = await getProduct(id);
