@@ -22,6 +22,9 @@ export async function generateMetadata({ params }: IProps) {
   return {
     title: product.title,
     description: product.description,
+    openGraph: {
+      images: [product.thumbnail || "https://via.placeholder.com/400"],
+    },
   };
 }
 
