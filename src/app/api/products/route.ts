@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const res = await fetch("https://dummyjson.com/products");
+  const res = await fetch("https://dummyjson.com/products", {
+    cache: "no-store",
+  });
 
   const data = await res.json();
 
